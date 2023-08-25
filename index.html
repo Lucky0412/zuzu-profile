@@ -1,0 +1,170 @@
+node --version<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Zuzu's Profile</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <!-- Font Awesome if you need it
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+  -->
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/> 
+  <!--Replace with your tailwind.css once created-->
+
+</head>
+
+<body class="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover" style="background-image:url('image/Background.jpg');">
+
+
+
+  <div class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
+    
+	<!--Main Col-->
+	<div id="profile" class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0">
+	
+
+		<div class="p-4 md:p-12 text-center lg:text-left">
+			<!-- Image for mobile view-->
+			<div class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style="background-image: url('image/Background.jpg')"></div>
+			
+			<h1 class="text-3xl font-bold pt-8 lg:pt-0">Mathipa Ramalepe</h1>
+			<div class="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
+            <h2><b>Personal Information</b></h2>
+			<p class="pt-8 text-sm"><form>
+                <table>
+                    <tr>
+                        <th><label for="name"> Name</label></td>
+                        <td>Mathipa Ramalepe</td>
+                        
+                    </tr>
+                    <tr>
+                        <th><label for="nick name"> Nick Name</label></td>
+                        <td>Zuzu</td>
+                        
+                    </tr>
+                    <tr>
+                        <th><label for="date"> Date of Birth</label></td>
+                        <td>April 17,2004</td>
+                        
+                    </tr>
+                    <tr>
+                        <th><label for="position"> Position</label></td>
+                        <td>Forward</td>
+                        
+                    </tr>
+                    <tr>
+                        <th><label for="height"> Height</label></td>
+                        <td>152cm</td>
+                        
+                    </tr>
+                    <tr>
+                        <th><label for="weight"> Weight</label></td>
+                        <td>43kg</td>
+                        
+                    </tr>
+
+                </table>
+            </form></p>
+            <h2><b>Club information</b></h2>
+                <table>
+                    <tr>
+                        <th><label for="Current club"> Current Club</label></td>
+                        <td>Dandol Acamedy </td>
+                    
+                     </tr>
+                
+                        <tr>
+                            <th><label for="Previous club"> Previous club</label></td>
+                            <td>TSSE(2018-2020)</td>
+                            <tr>
+                                <th><label for="Previous club"> </label></td>
+                                    <td>Tufloops95(2021-2022)</td> 
+                            </tr>
+                            <tr><th><label for="Previous club"></label></td>
+                                <td>Eisleben Sundowns(2022)</td>
+                            </tr>
+                    
+                        </tr>
+                        
+                </table>
+                <h2><b>Playing Style </b></h2>
+                <p>Mathipa Ramalepe(Zuzu) is a versatile false striker known for his excellent passing accuracy and vision on the field.
+                    He excels in distributing the ball to teammates, creating scoring opportunities, and 
+                    maintaining control of the game's tempo. His exceptional work rate, tactical awareness, and 
+                   ability to read the game make him a valuable asset in both offensive and defensive situations</p>
+
+
+			<!--<div class="pt-12 pb-8">
+				<button class="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full">
+				Gallery
+				</button> 
+			</div>-->
+
+			
+			
+			<!-- Use https://simpleicons.org/ to find the svg for your preferred product --> 
+
+		</div>
+
+	</div>
+	
+	<!--Img Col-->
+	<div class="w-full lg:w-2/5">
+		<!-- Big profile image for side bar (desktop) -->
+		<img src="image/profile.jpg" class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block">
+		<!-- Image from: http://unsplash.com/photos/MP0IUfwrn0A -->
+		
+	</div>
+	
+	
+	<!-- Pin to top right corner -->
+  <!-- <div class="absolute top-0 right-0 h-12 w-18 p-4">
+		<button class="js-change-theme focus:outline-none">🌙</button>
+	  </div> -->
+	 
+
+</div>
+
+	<script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
+	<script src="https://unpkg.com/tippy.js@4"></script>
+	<script>
+		//Init tooltips
+		tippy('.link',{
+		  placement: 'bottom'
+		})
+
+		//Toggle mode
+		const toggle = document.querySelector('.js-change-theme');
+		const body = document.querySelector('body');
+		const profile = document.getElementById('profile');
+		
+		
+		toggle.addEventListener('click', () => {
+
+		  if (body.classList.contains('text-gray-900')) {
+			toggle.innerHTML = "☀️";
+			body.classList.remove('text-gray-900');
+			body.classList.add('text-gray-100');
+			profile.classList.remove('bg-white');
+			profile.classList.add('bg-gray-900');
+		  } else
+		  {
+			toggle.innerHTML = "🌙";
+			body.classList.remove('text-gray-100');
+			body.classList.add('text-gray-900');
+			profile.classList.remove('bg-gray-900');			
+			profile.classList.add('bg-white');
+			
+		  }
+		});
+		
+    </script>
+	
+</body>
+
+</html>
